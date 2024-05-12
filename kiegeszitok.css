@@ -1,0 +1,313 @@
+body {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    gap: 20px;
+}
+
+header {
+    color: #fff;
+    padding: 20px;
+    font-size: x-large;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+}
+  
+.menu-left {
+    justify-self: start;
+}
+  
+.menu-right {
+    justify-self: end;
+}
+  
+.menu a {
+    color: black;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+  
+.menu a:hover {
+    background-color: #C6071E;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.box {
+    display: flex;
+    text-align: start;
+    font-size: x-large;
+    background-color: #fff;
+    margin: 50px;
+    border: 1px solid #C6071E;
+}
+
+.box img {
+   max-width: 50%;
+}
+
+.box-text {
+    flex-grow: 1;
+    align-content: center;
+    padding: 0px 150px 0px 100px;
+}
+
+.slider-container {
+    position: relative;
+}
+  
+.slider {
+    display: flex;
+    overflow: hidden;
+    text-align: center;
+}
+  
+.slide {
+    flex: 0 0 100%;
+}
+  
+.slide img {
+    width: 100%;
+    height: auto;
+}
+  
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #C6071E;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+  
+.prev-btn {
+    left: 0;
+}
+  
+.next-btn {
+    right: 0;
+}
+  
+
+footer {
+    display: flex;
+    background-color: #C6071E;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: large;
+}
+
+#info, #email, #tel {
+    flex: 1;
+}
+
+footer #jog {
+    color: rgb(193, 192, 192);
+}
+
+#goToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    background-color: #C6071E;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+#goToTopBtn:hover {
+    opacity: 0.8;
+}
+
+#ajanlat {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+#ajanlatgomb {
+    width: 300px;
+    height: 70px;
+    margin-top: 50px;
+    font-size: x-large;
+    background-color: #C6071E;
+    border: none;
+    transition: ease-in 0.2s;
+}
+
+#ajanlatgomb a {
+    text-decoration: none;
+    color: white;
+}
+
+#ajanlatgomb a:visited {
+    color: white;
+}
+
+#ajanlatgomb:hover {
+    background-color: #A26028;
+    color: #C6071E;
+}
+
+@media screen and (max-width: 360px) {
+    .menu {
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+
+    .menu-right {
+        display: none;
+    }
+    
+    .menu-toggle {
+        display: block;
+        padding: 10px;
+    }
+
+    .menu a {
+        display: block;
+        text-align: center;
+    }
+    
+    .menu-toggle:hover {
+        background-color: #C6071E;
+    }
+    
+    .box {
+        flex-direction: column;
+        margin: 20px;
+        border: 2px #C6071E solid;
+        box-shadow: none;
+    }
+
+    .box img {
+        max-width: 100%;
+    }
+
+    .box-text {
+        padding: 10px;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: xx-large;
+        text-decoration: underline;
+    }
+
+    p {
+        font-size: large;
+    }
+
+    .slider {
+        flex-direction: column;
+    }
+
+    .slide {
+        flex: 0 0 auto;
+    }
+
+    .prev-btn,
+    .next-btn {
+        top: auto;
+        bottom: 20px;
+        transform: translateY(0);
+        width: 50%;
+    }
+
+    .prev-btn {
+        left: 0;
+    }
+    
+    .next-btn {
+        right: 0;
+    }
+
+    #ajanlatgomb {
+        font-size: medium;
+        width: 50vw;
+        height: 4vh;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        font-size: large;
+    }
+}
+
+@media screen and (max-width: 809px) {
+    .menu-toggle:hover {
+        background-color: #C6071E;
+    }
+    
+    .menu.active .menu-right {
+        display: grid;
+    }
+
+    .box {
+        flex-direction: column;
+        margin: 20px;
+    }
+
+    .box img {
+        max-width: 100%;
+    }
+
+    .box-text {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .slider {
+        flex-direction: column;
+    }
+
+    .slide {
+        flex: 0 0 auto;
+    }
+
+    .prev-btn,
+    .next-btn {
+        top: auto;
+        bottom: 20px;
+        transform: translateY(0);
+        width: 50%;
+    }
+
+    .prev-btn {
+        left: 0;
+    }
+    
+    .next-btn {
+        right: 0;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        font-size: large;
+    }   
+}

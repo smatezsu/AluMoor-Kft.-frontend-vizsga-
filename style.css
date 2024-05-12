@@ -1,0 +1,233 @@
+body {
+    background-color: #fff;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    display: grid;
+}
+
+header {
+    color: #fff;
+    padding: 20px;
+    font-size: x-large;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+}
+
+.menu-right {
+    justify-self: end;
+}
+
+.menu a {
+    color: black;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.menu a:hover {
+    background-color: #C6071E;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+main {
+    padding-top: 20px;
+}
+
+#borito {
+    background-image: url(./img/borito2.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 50vh;
+    align-content: center;
+    padding-left: 15px;
+    color: #C6071E;
+    font-size: x-large;
+}
+
+#leiras {
+    font-size: x-large;
+    padding: 20px 0px 20px 15px;
+    line-height: 50px;
+}
+
+#pergoladiv {
+    background-color: #9e2424;
+    background-image: url(./img/Pergola_kep_4_zip.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    align-content: center;
+    text-align: center;
+    height: 60vh;
+}
+
+#pergolagomb {
+    font-size: x-large;
+    color: white;
+    width: 200px;
+    height: 60px;
+    opacity: 60%;
+    background-color: #C6071E;
+    border: none;
+    transition: ease-in 0.2s;
+}
+
+#pergolagomb a {
+    text-decoration: none;
+    color: white;
+}
+
+#pergolagomb a:active, #pergolagomb a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+#pergolagomb:hover {
+    background-color: #A26028;
+    color: #C6071E;
+    opacity: 100%;
+}
+
+#ajanlatdiv {
+    align-content: center;
+    text-align: center;
+    height: 25vh;
+}
+
+#ajanlatgomb {
+    width: 250px;
+    height: 60px;
+    margin-top: 50px;
+    font-size: x-large;
+    background-color: #C6071E;
+    border: none;
+    transition: ease-in 0.2s;
+}
+
+#ajanlatgomb a {
+    text-decoration: none;
+    color: white;
+}
+
+#ajanlatgomb a:visited {
+    color: white;
+}
+
+#ajanlatgomb:hover {
+    background-color: #A26028;
+    color: #C6071E;
+}
+
+#ajanlatdiv p {
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+footer {
+    display: flex;
+    background-color: #C6071E;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: large;
+}
+
+#info, #email, #tel {
+    flex: 1;
+}
+
+#goToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    background-color: #C6071E;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+#goToTopBtn:hover {
+    opacity: 0.8;
+}
+
+
+footer #jog {
+    color: rgb(193, 192, 192);
+}
+
+@media screen and (max-width: 360px) {
+    .menu {
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+
+    .menu a {
+        display: block;
+        text-align: center;
+    }
+
+    .menu-right {
+        display: none;
+    }
+    
+    .menu-toggle {
+        display: block;
+        padding: 10px;
+    }
+    
+    .menu-toggle:hover {
+        background-color: #C6071E;
+    }
+    
+    .menu.active .menu-right {
+        display: grid;
+    }
+
+    #borito {
+        font-size: large;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        font-size: large;
+    }
+}
+
+@media screen and (max-width: 679px) {
+    #borito, #leiras {
+        font-size: large;
+    }
+
+    #ajanlatdiv p {
+        font-size: medium;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        font-size: large;
+    }
+}

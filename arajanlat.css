@@ -1,0 +1,249 @@
+body {
+    background-color: #fff;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+  }
+  
+header {
+    color: #fff;
+    padding: 20px;
+    font-size: x-large;
+  }
+  
+footer {
+    background-color: #C6071E;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: x-large;
+  }
+  
+.menu {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+  }
+  
+.menu-left {
+    justify-self: start;
+  }
+  
+.menu-right {
+    justify-self: end;
+  }
+  
+.menu a {
+    color: black;
+    text-decoration: none;
+    padding: 5px 10px;
+  }
+  
+.menu a:hover {
+    background-color: #C6071E;
+    color: #fff;
+    transition: 0.5s;
+  }
+  
+.menu-toggle {
+    display: none;
+  }
+  
+  main {
+    padding: 40px 0px 40px 0px;
+  }
+  
+.centered-form {
+    margin: 50px;
+    border: 2px #C6071E solid;
+    background-color: white;
+    display: grid;
+    place-items: center;
+    text-align: center;
+  }
+  
+form {
+    display: grid;
+    grid-gap: 10px;
+  }
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="number"]:hover,
+select:hover {
+    border: 2px solid black;
+  }
+  
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+button {
+    padding: 10px;
+    border: 1.5px solid black;
+    width: calc(20% - 30px);
+    box-sizing: border-box;
+  }
+  
+#kiegeszitok {
+    text-align: start;
+  }
+
+.termek {
+    padding: 5px;
+  }
+
+#kitoltendo {
+    color: red;
+  }
+  
+button {
+    background-color: #C6071E;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+    width: 20vh;
+    height: 5vh;
+    font-size: large;
+  }
+  
+button:hover {
+    background-color: #A26028;
+  }
+
+footer {
+    display: flex;
+    background-color: #C6071E;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: large;
+}
+
+#goToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  background-color: #C6071E;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+#goToTopBtn:hover {
+  opacity: 0.8;
+}
+
+#info, #email, #tel {
+    flex: 1;
+}
+
+footer #jog {
+    color: rgb(193, 192, 192);
+}
+
+@media screen and (max-width: 360px) {
+  .menu {
+    grid-template-columns: auto;
+    justify-content: center;
+    }
+
+    .menu-right {
+      display: none;
+    }
+    
+    .menu-toggle {
+      display: block;
+      padding: 10px;
+    }
+
+    .menu a {
+      display: block;
+      text-align: center;
+    }
+    
+    .menu-toggle:hover {
+      background-color: #C6071E;
+    }
+    
+    .menu.active .menu-right {
+      display: grid;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    select {
+        padding: 10px;
+        border: 1.5px solid black;
+        width: calc(20% - -100px);
+        box-sizing: border-box;
+    }
+    
+
+    footer {
+      flex-direction: column;
+      align-items: center;
+      font-size: large;
+    }
+
+  #info, #email, #tel {
+      flex: initial;
+      margin: 10px 0;
+    }
+  }
+
+@media screen and (max-width: 768px) {
+    main {
+      padding: 30px 10px;
+    }
+  
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    select,
+    button {
+      width: calc(100% - 20px);
+    }
+  }
+
+@media screen and (min-width: 769px) {
+    main {
+      padding: 40px 10px;
+    }
+  
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    select,
+    button {
+      width: auto;
+    }
+  }
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  

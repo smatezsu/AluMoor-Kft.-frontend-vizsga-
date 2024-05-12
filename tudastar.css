@@ -1,0 +1,197 @@
+body {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    display: grid;
+    gap: 20px;
+
+}
+
+header {
+    color: #fff;
+    padding: 20px;
+    font-size: x-large;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+}
+  
+.menu-left {
+    justify-self: start;
+}
+  
+.menu-right {
+    justify-self: end;
+}
+  
+.menu a {
+    color: black;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+  
+.menu a:hover {
+    background-color: #C6071E;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+table {
+    margin: 20px;
+}
+
+caption {
+    font-size: x-large;
+    font-weight: bold;
+    padding-bottom: 40px;
+}
+
+th, td {
+    border: 2px solid #C6071E;
+    padding: 8px;
+    text-align: center;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    font-size: x-large;
+    border: 2px #C6071E solid;
+    background-color: #fff;
+    margin: 20px;
+}
+
+.box img {
+   max-width: 100%;
+   height: 30vh;
+   flex: 3;
+}
+
+.box-text {
+    flex-grow: 1;
+    align-content: center;
+    text-align: center;
+    padding: 0px 10px 0px 10px;
+}
+
+#goToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    background-color: #C6071E;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+#goToTopBtn:hover {
+    opacity: 0.8;
+}
+
+footer {
+    display: flex;
+    background-color: #C6071E;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: large;
+}
+
+#info, #email, #tel {
+    flex: 1;
+}
+
+footer #jog {
+    color: rgb(193, 192, 192);
+}
+
+@media screen and (max-width: 360px) {
+    .menu {
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+  
+    .menu-right {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+        padding: 10px;
+        color: #fff;
+    }
+
+    .menu a {
+        display: block;
+        text-align: center;
+    }
+
+    .menu-toggle:hover {
+        background-color: #C6071E;
+    }
+      
+      .menu.active .menu-right {
+        display: grid;
+    }
+  
+    .box {
+        flex-direction: column;
+    }
+  
+    .box img {
+        height: auto;
+        max-height: 50vh;
+        flex: initial;
+    }
+
+    h1 {
+        font-size: xx-large;
+        text-decoration: underline;
+    }
+
+    p {
+        font-size: large;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        font-size: large;
+    }
+  
+    #info, #email, #tel {
+        flex: initial;
+        margin: 10px 0;
+    }
+
+    th, td {
+        border: 1px solid #C6071E;
+    }
+
+    table {
+        font-size: small;
+    }
+
+    caption {
+        font-size: large;
+    }
+}

@@ -1,0 +1,232 @@
+body {
+    background-color: #fff;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    display: grid;
+}
+
+header {
+    color: #fff;
+    padding: 20px;
+    font-size: x-large;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+}
+  
+.menu-left {
+    justify-self: start;
+}
+  
+.menu-right {
+    justify-self: end;
+}
+  
+.menu a {
+    color: black;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+  
+.menu a:hover {
+    background-color: #C6071E;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+main {
+    padding-top: 20px;
+}
+
+.box {
+    display: flex;
+    text-align: center;
+    font-size: x-large;
+    margin: 50px;
+}
+
+.box h1 {
+    align-content: center;
+}
+
+.box-text {
+    flex-grow: 1;
+    padding: 0px 10px 0px 10px;
+    align-content: center;
+}
+
+#otthon {
+    background-image: url(./img/Kulvilagra_nyitott_otthon.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 70vh;
+    color: white;
+    align-content: center;
+    text-align: end;
+    font-size: x-large;
+}
+
+#otthon h1 {
+    padding-right: 50px;
+}
+
+#pergola {
+    background-image: url(./img/Pergola_pergola.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+}
+
+#ref {
+    background-image: url(./img/ajanlat_referencia.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 30px;
+    height: 70vh;
+    text-align: center;
+    align-content: center;
+    justify-items: auto;
+}
+
+.gomb {
+    margin: 20px;
+    font-size: x-large;
+    color: white;
+    width: 250px;
+    height: 60px;
+    background-color: #C6071E;
+    opacity: 60%;
+    border: none;
+    transition: ease-in 0.2s;
+}
+
+.gomb a {
+    text-decoration: none;
+    color: white;
+}
+
+.gomb a:active {
+    color: white;
+    text-decoration: none;
+}
+
+.gomb a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.gomb:hover {
+    background-color: #A26028;
+    color: #C6071E;
+    opacity: 100%;
+}
+
+#goToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    background-color: #C6071E;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+#goToTopBtn:hover {
+    opacity: 0.8;
+}
+
+footer {
+    display: flex;
+    background-color: #C6071E;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: large;
+}
+
+#info, #email, #tel {
+    flex: 1;
+}
+
+footer #jog {
+    color: rgb(193, 192, 192);
+}
+
+@media screen and (max-width: 360px) {
+    .menu {
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+    
+    .menu-right {
+        display: none;
+    }
+    
+    .menu-toggle {
+        display: block;
+        padding: 10px;
+    }
+    
+    .menu a {
+        display: block;
+        text-align: center;
+    }
+
+    .box-text {
+        font-size: large;
+    }
+
+    #otthon h1 {
+        font-size: xx-large;
+    }
+    
+    .box {
+        flex-direction: column;
+        margin: 20px;
+    }
+    
+    .box h1 {
+        padding: 0;
+    }
+    
+    .gomb {
+        margin: 20px;
+        font-size: medium;
+        /* width: 50vw;
+        height: 4vh; */
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        font-size: large;
+    }
+}
+
+@media screen and (max-width: 646px) {
+    footer {
+        flex-direction: column;
+    }
+}
